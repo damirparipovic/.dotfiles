@@ -31,10 +31,12 @@ Plug 'mbbill/undotree'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
 Plug 'lervag/vimtex'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_hls_cursor='orange'
+let g:gruvbox_guisp_fallback = 'bg'
 colorscheme gruvbox
 
 " Maps
@@ -53,11 +55,19 @@ nnoremap <leader>P "+P
 inoremap <C-V> "+gp
 vnoremap <leader>y "+y
 
-nnoremap <C-p> :Files<CR>
-nnoremap <leader>f :Rg<CR>
+nnoremap <leader>ff :Files<CR>
+nnoremap <leader>fg :Rg<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>d :bdel<CR>
 
+" Spell checking
+set spelllang=en_ca
+autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.tex setlocal spell
+autocmd BufRead,BufNewFile *.txt setlocal spell
+set complete+=kspell
+
+" Emmet
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 let g:user_emmet_leader_key=','
