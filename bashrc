@@ -13,7 +13,8 @@ alias lh='ls -halt'
 alias nc='nordvpn connect'
 alias nd='nordvpn disconnect'
 alias ns='nordvpn status'
-alias rg='ranger'
+alias ud='sudo pacman -Syu && yay -Syu'
+alias ..='cd ..'
 
 if [ -d ~/.bash_functions ]; then
     for file in ~/.bash_functions/*; do

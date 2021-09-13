@@ -1,6 +1,7 @@
 - defaults:
     link:
-      relinkl: true
+      create: true
+      force: true
 
 - clean: ['~']
 
@@ -8,12 +9,8 @@
     ~/.bashrc: bashrc
     ~/.vim: vim
     ~/.vimrc: vimrc
-    ~/.tmux.conf: tmux.conf
-
-- create:
-    - ~/.vim/undodir
-    - ~/.vim/autoload
-    - ~/.vim/plugged
+    ~/.tmux.conf.local: tmux.conf.local
+    ~/.config/nvim: nvim
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
