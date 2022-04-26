@@ -23,14 +23,14 @@ nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
 nnoremap <leader>x :close<CR>
 
-nnoremap <leader>u :UndotreeToggle<CR>
-
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 nnoremap <leader>Y gg"+yG
+
+nnoremap <leader>p "+p
 
 " requiring lua config files
 lua require('nvim-cmp')

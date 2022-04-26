@@ -3,7 +3,8 @@
 #
 
 # set vim keybindings
-#set -o vi
+# set -o vi
+
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
 
@@ -14,6 +15,8 @@ alias nc='nordvpn connect'
 alias nd='nordvpn disconnect'
 alias ns='nordvpn status'
 alias ..='cd ..'
+
+export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
 
 if [ -d ~/.bash_functions ]; then
     for file in ~/.bash_functions/*; do
@@ -128,6 +131,7 @@ shopt -s checkwinsize
 shopt -s expand_aliases
 
 # export QT_SELECT=4
+export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
@@ -156,3 +160,19 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/damirp/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/damirp/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/damirp/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/damirp/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
