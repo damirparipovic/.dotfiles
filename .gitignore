@@ -2,3 +2,6 @@
 nvim/undodir
 
 vim/undodir
+
+nvim/plugged/LuaSnip/.git
+nvim/plugged/nvim-lspconfig/.git
