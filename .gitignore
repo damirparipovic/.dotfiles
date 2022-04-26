@@ -1,2 +1,4 @@
 # ignore nvim/undodir
-./nvim/*
+nvim/undodir
+
+vim/undodir
