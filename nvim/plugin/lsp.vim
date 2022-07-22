@@ -15,8 +15,14 @@ if exists('+termguicolors')
 endif
 let g:gruvbox_invert_selection='0'
 
+lua require("nvim-lsp-installer").setup()
+
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 lua require('lspconfig').pyright.setup{}
 lua require('lspconfig').clangd.setup{}
 lua require('lspconfig').hls.setup{}
 lua require('lspconfig').racket_langserver.setup{}
+lua require('lspconfig').tsserver.setup{}
+lua require('lspconfig').emmet_ls.setup{}
+lua require('lspconfig').cssls.setup{capabilities = capabilities,}
+lua require('lspconfig').rust_analyzer.setup{}
