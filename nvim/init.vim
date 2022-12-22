@@ -1,3 +1,9 @@
+if exists('g:vscode')
+    " VSCODE extension
+else
+    " ordinary Neovim
+endif
+
 " Plugins
 call plug#begin()
 Plug 'gruvbox-community/gruvbox'
@@ -21,19 +27,25 @@ call plug#end()
 " General remaps
 let mapleader=" "
 
+" window commands
 nnoremap <leader>h <C-w>h
 nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
 nnoremap <leader>x :close<CR>
 
+" buffer commands
+nnoremap <leader>R :bn<CR>
+nnoremap <leader>E :bp<CR>
+
+" move highlighted line up or down
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
+" copy pasta
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 nnoremap <leader>Y gg"+yG
-
 nnoremap <leader>p "+p
 
 " requiring lua config files
