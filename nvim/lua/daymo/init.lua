@@ -1,2 +1,2 @@
-require("daymo.remap")
 require("daymo.set")
+require("daymo.remap")
