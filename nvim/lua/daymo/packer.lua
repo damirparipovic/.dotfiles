@@ -50,5 +50,9 @@ return require('packer').startup(function(use)
 		  {'rafamadriz/friendly-snippets'},
 	  }
   }
+  -- Lua
+  use {
+      "folke/zen-mode.nvim",
+  }
 
 end)
