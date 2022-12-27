@@ -27,5 +27,5 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- for quickfix list
 
--- hacks
+-- hacks (search and replace)
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
