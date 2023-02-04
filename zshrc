@@ -130,6 +130,9 @@ alias ns="nordvpn status"
 ## nvim
 alias nv="nvim"
 alias nvimconfig="nvim ~/.dotfiles/nvim/."
+# pdf view
+alias zv=zathuraView
+#alias pipsize=pip list | tail -n +3 | awk '{print $1}' | xargs pip show | grep -E 'Location:|Name:' | cut -d ' ' -f 2 | paste -d ' ' - - | awk '{print $2 "/" tolower($1)}' | xargs du -sh 2> /dev/null | sort -hr
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -145,3 +148,12 @@ function options() {
         echo "\n\nPlugin: $plugin"; grep -r "^function \w*" $PLUGIN_PATH$plugin | awk '{print $2}' | sed 's/()//' | tr '\n' ', '; grep -r "^alias" $PLUGIN_PATH$plugin | awk '{print $2}' | sed 's/=.*//' | tr '\n' ', '
     done
 }
+
+function zathuraView () {
+    zathura $1 & disown
+}
+
+# for pyenv
+export PYENV_ROOT="$HOME/.pyenv" >> ~/.zshrc
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH" >> ~/.zshrc
+eval "$(pyenv init -)" >> ~/.zshrc
