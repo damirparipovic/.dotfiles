@@ -23,6 +23,7 @@ require('lualine').setup {
     lualine_c = {
         {
             'filename',
+            --[[
             file_status = true,      -- Displays file status (readonly status, modified status)
             newfile_status = false,  -- Display new file status (new file means no write after created)
             path = 3,                -- 0: Just the filename
@@ -38,6 +39,7 @@ require('lualine').setup {
                 unnamed = '[No Name]', -- Text to show for unnamed buffers.
                 newfile = '[New]',     -- Text to show for new created file before first writting
             }
+            --]]
         }
     },
     lualine_x = {'encoding', 'filetype'},

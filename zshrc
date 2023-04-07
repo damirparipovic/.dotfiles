@@ -24,7 +24,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # For ssh-agent adding identities
-zstyle :omz:plugins:ssh-agent identities dp_ed25519 id_rsa gitlab_sfu
+zstyle :omz:plugins:ssh-agent identities dp_ed25519 id_rsa gitlab_sfu github_sfu
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -35,7 +35,7 @@ zstyle :omz:plugins:ssh-agent identities dp_ed25519 id_rsa gitlab_sfu
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' mode auto      # update automatically without asking
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
