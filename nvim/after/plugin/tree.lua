@@ -29,7 +29,7 @@ require("nvim-tree").setup({
   },
 })
 
-vim.keymap.set('n', '<leader>to',  ":NvimTreeOpen<CR>")
-vim.keymap.set('n', '<leader>tc',  ":NvimTreeClose<CR>")
+vim.keymap.set('n', '<leader>to',  ":NvimTreeFocus<CR>")
+vim.keymap.set('n', '<leader>tc',  ":NvimTreeToggle<CR>")
 vim.keymap.set('n', '<leader>tf',  ":NvimTreeFindFile<CR>")
 vim.keymap.set('n', '<leader>tx',  ":NvimTreeCollapse<CR>")

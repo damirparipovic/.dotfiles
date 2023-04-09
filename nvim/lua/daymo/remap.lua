@@ -1,3 +1,6 @@
+-- source neovim
+vim.keymap.set("n", "<leader>SO", ":so ~/.config/nvim/init.lua<CR>")
+
 -- copy pasta
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
@@ -9,7 +12,6 @@ vim.keymap.set("n", "<leader>pp", "\"+p")
 --vim.keymap.set("n", "<leader>k", "<C-w>k")
 --vim.keymap.set("n", "<leader>l", "<C-w>l")
 vim.keymap.set("n", "<leader>x", ":close<CR>")
-
 -- buffer commands
 vim.keymap.set("n", "<leader>R", ":bn<CR>")
 vim.keymap.set("n", "<leader>E", ":bp<CR>")
@@ -21,7 +23,10 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- insert mode next line
-vim.keymap.set("i", "<C-o>", "<Esc>o")
+vim.keymap.set("i", "<M-j>", "<Esc>o")
+vim.keymap.set("i", "<M-k>", "<Esc>O")
+vim.keymap.set("i", "<M-h>", "<Esc>I")
+vim.keymap.set("i", "<M-l>", "<Esc>A")
 
 -- for quickfix list
 
