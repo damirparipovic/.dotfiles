@@ -6,7 +6,6 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use {'wbthomason/packer.nvim'}
-  
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
 	  -- or                            , branch = '0.1.x',
@@ -27,10 +26,12 @@ return require('packer').startup(function(use)
   use {'shaunsingh/nord.nvim'}
   use {'marko-cerovac/material.nvim'}
 
+  -- navigation and git
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
 
+  -- lsp
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  requires = {
@@ -52,7 +53,6 @@ return require('packer').startup(function(use)
 		  {'rafamadriz/friendly-snippets'},
 	  }
   }
-
   use {"folke/zen-mode.nvim",}
 
   use {
@@ -69,6 +69,20 @@ return require('packer').startup(function(use)
   use {
       "windwp/nvim-autopairs",
       config = function() require("nvim-autopairs").setup {} end
+  }
+  -- vim surround
+
+  -- html stuff
+  use {"windwp/nvim-ts-autotag",}
+  use {"mattn/emmet-vim"}
+
+  -- latex stuff
+  use {'lervag/vimtex'}
+  use {'mhinz/neovim-remote'}
+  use { "nvim-telescope/telescope-bibtex.nvim",
+      requires = {
+          {'nvim-telescope/telescope.nvim'},
+      },
   }
 
 end)

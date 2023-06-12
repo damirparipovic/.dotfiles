@@ -1,5 +1,5 @@
 -- source neovim
-vim.keymap.set("n", "<leader>SO", ":so ~/.config/nvim/init.lua<CR>")
+vim.keymap.set("n", "<leader>SO", ":so $MYVIMRC<CR>")
 
 -- copy pasta
 vim.keymap.set("n", "<leader>y", "\"+y")
@@ -23,10 +23,10 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- insert mode next line
-vim.keymap.set("i", "<M-j>", "<Esc>o")
-vim.keymap.set("i", "<M-k>", "<Esc>O")
-vim.keymap.set("i", "<M-h>", "<Esc>I")
-vim.keymap.set("i", "<M-l>", "<Esc>A")
+--vim.keymap.set("i", "<M-j>", "<C-O>o")
+--vim.keymap.set("i", "<M-k>", "<C-O>O")
+--vim.keymap.set("i", "<M-h>", "<C-O>I")
+--vim.keymap.set("i", "<M-l>", "<C-O>A")
 
 -- for quickfix list
 
