@@ -134,7 +134,7 @@ alias nvimmaps="less ~/.dotfiles/nvim/lua/daymo/remap.lua"
 # python repl
 alias ptpython="ptpython --vi"
 # pdf view
-alias zv=zathuraView
+#alias zv=zathuraView
 #alias pipsize=pip list | tail -n +3 | awk '{print $1}' | xargs pip show | grep -E 'Location:|Name:' | cut -d ' ' -f 2 | paste -d ' ' - - | awk '{print $2 "/" tolower($1)}' | xargs du -sh 2> /dev/null | sort -hr
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -152,7 +152,7 @@ function options() {
     done
 }
 
-function zathuraView () {
+function zathuraView() {
     zathura $1 & disown
 }
 

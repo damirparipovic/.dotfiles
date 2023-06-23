@@ -4,16 +4,21 @@ function ColorMyPencils(color)
     then
         materialSets(color)
     end
-	vim.cmd.colorscheme(color)
+    if (color == "gruvbox")
+    then
+        vim.o.background = "dark"
+        require("gruvbox").setup({
+            contrast = "",
+        })
+    end
+    vim.cmd.colorscheme(color)
 end
 
 function materialSets(color)
     if (color == "material")
     then
         vim.g.material_style = "deep ocean"
-    else
-        vim.g.material_style = "oceanic"
     end
 end
 
-ColorMyPencils()
+ColorMyPencils("gruvbox")

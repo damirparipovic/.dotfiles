@@ -84,5 +84,9 @@ return require('packer').startup(function(use)
           {'nvim-telescope/telescope.nvim'},
       },
   }
+  use {'terrortylor/nvim-comment'}
+  use {'kylechui/nvim-surround',
+  tag = "*", -- Use for stability; omit to use 'main' branch for the latest feature
+  }
 
 end)
