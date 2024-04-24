@@ -24,7 +24,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # For ssh-agent adding identities
-zstyle :omz:plugins:ssh-agent identities dp_ed25519 id_rsa gitlab_sfu github_sfu
+zstyle :omz:plugins:ssh-agent identities github_personal_ed25519
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -133,9 +133,14 @@ alias nvimconfig="nvim ~/.dotfiles/nvim/."
 alias nvimmaps="less ~/.dotfiles/nvim/lua/daymo/remap.lua"
 # python repl
 alias ptpython="ptpython --vi"
+alias mkcd='f() { mkdir -p "$1" && cd "$1" }; f'
 # pdf view
 #alias zv=zathuraView
 #alias pipsize=pip list | tail -n +3 | awk '{print $1}' | xargs pip show | grep -E 'Location:|Name:' | cut -d ' ' -f 2 | paste -d ' ' - - | awk '{print $2 "/" tolower($1)}' | xargs du -sh 2> /dev/null | sort -hr
+# docker desktop
+alias dockerstart="systemctl --user start docker-desktop"
+alias dockerrestart="systemctl --user force-reload docker-desktop"
+alias dockerstop="systemctl --user stop docker-desktop"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
