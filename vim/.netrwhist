@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
-let g:netrw_dirhist_6='/home/damirp/.dotfiles/nvim'
-let g:netrw_dirhist_5='/home/damirp/.config/nvim'
-let g:netrw_dirhist_4='/home/damirp/learn/latex/resume/personal_versions/cv_14'
-let g:netrw_dirhist_3='/home/damirp/.vimrc'
-let g:netrw_dirhist_2='/home/damirp/.ssh'
-let g:netrw_dirhist_1='/home/damirp/.vim'
