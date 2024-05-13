@@ -1,5 +1,8 @@
 # My Dotfiles
 
+## Install
+`git clone https://github.com/damirparipovic/.dotfiles.git && cd .dotfiles && install`
+
 ## Overview
 This repository contains all of my personal dotfiles, essential for setting up and maintaining my workflow environment. It's tailored specifically to my preferences and setup, using Dotbot for management.
 
