@@ -12,6 +12,11 @@
   ~/.tmux.conf: tmux.conf
   ~/.config/nvim: nvim
   ~/.zshrc: zshrc
+  ~/.config/alacritty/alacritty.toml: alacritty.toml
+  ~/.i3/config: i3/config
+
+- create:
+  - ~/.oh-my-zsh
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
