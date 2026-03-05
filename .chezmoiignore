@@ -1,0 +1,4 @@
+# Don't apply Linux shell/TMUX configs on Windows
+dot_bashrc [os = windows]
+dot_zshrc [os = windows]
+dot_tmux.conf [os = windows]

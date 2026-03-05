@@ -1,7 +1,2 @@
-# ignore nvim/undodir
-nvim/undodir
-
-vim/undodir
-
-nvim/plugged/LuaSnip/.git
-nvim/plugged/nvim-lspconfig/.git
+dot_config/nvim/undodir/
+dot_config/nvim/plugged/**/.git

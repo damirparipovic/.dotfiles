@@ -1,11 +1,25 @@
-# My Dotfiles
+# My Dotfiles (chezmoi)
 
-## Install
-`git clone https://github.com/damirparipovic/.dotfiles.git && cd .dotfiles && install`
+This repo is now managed with [chezmoi](https://www.chezmoi.io/) and designed to work across Windows and Linux.
 
-## Overview
-This repository contains all of my personal dotfiles, essential for setting up and maintaining my workflow environment. It's tailored specifically to my preferences and setup, using Dotbot for management.
+## Install on a new machine
 
-## Dotbot Reference
-For a refresher on how to use Dotbot, especially during system reinstallation or setup, refer to this useful guide:
-[Bootstrap Your Dotfiles with Dotbot](https://www.elliotdenolf.com/blog/bootstrap-your-dotfiles-with-dotbot)
+1. Install chezmoi.
+2. Apply this repo:
+
+```powershell
+chezmoi init --apply damirparipovic
+```
+
+## Daily workflow
+
+```powershell
+chezmoi status
+chezmoi diff
+chezmoi apply
+```
+
+## Notes
+
+- Canonical Neovim config comes from `%LOCALAPPDATA%\nvim` and is stored under `dot_config/nvim`.
+- Linux-specific shell files remain in the repo but are excluded on Windows via `.chezmoiignore`.
